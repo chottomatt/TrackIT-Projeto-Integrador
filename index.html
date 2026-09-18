@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackIT</title>
+</head>
+<body>
+    <main class="login-card">
+        <header>
+            <h1>
+                Track<span class="IT">IT</span>
+            </h1>
+            <h2>Bem-vindo de volta</h2>
+            <p>Faça login para acessar o inventário</p>
+        </header>
+        <!-- BACKEND: precisa ajustar a rota
+                {email, password}
+                a API devolve em caso de sucesso e de erro
+                sucesso: 200 + token ou cookie de sessão(backend precisa definir)
+                        -> front redireciona pro dashboard 
+                erro: 401 + { "message": "E-mail ou senha inválidos" }
+                        (mesma mensagem pra e-mail inexistente ou senha errada)
+                Erro do servidor: 500 -->
+        <form action="/api/auth/login" method="POST">
+            <p id="login-error" role="alert" hidden></p>
+            <div class="field">
+                <label for="email"> E-mail corporativo</label>
+                    <!-- BACKEND: chega em req.body.email . Validar formato também no servidor. -->
+                    <input type="email" id="email" name="email" placeholder="nome@empresa.com" required/> 
+            </div>            
+            <div class="field">
+                <label for="password"> Senha</label>
+                    <div class="password-wrapper">
+                        <!-- BACKEND: chega em req.body.password . comparar com o hash salvo
+                        nunca registrar em log, nem devolver em resposta -->
+                        <input type="password" id="password" name="password" placeholder="••••••••" required/>
+                        <button type="button" aria-label="Mostrar senha">👁</button>
+                    </div>
+            </div>
+            <div class="field-forgot-password">
+                <!-- BACKEND: ajustar rota para a página de recuperação de senha -->
+                <a href="/esqueci-senha">Esqueceu a senha?</a>
+            </div>
+                <!-- BACKEND: envia o form, em caso de sucesso entra no dashboard inventário  -->
+                <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+        <div class="divider">
+            <p>ou</p>
+        </div>
+        <!-- BACKEND: a definir rota que entra na tela de cadastro -->
+        <a href="/cadastro" class="btn btn-outline">Criar nova conta</a>
+    </main>
+</body>
+</html>
