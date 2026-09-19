@@ -40,7 +40,9 @@
                     <!-- BACKEND: chega em req.body.password . comparar com o hash salvo
                     nunca registrar em log, nem devolver em resposta -->
                     <input type="password" id="password" name="password" placeholder="••••••••" required/>
-                    <button type="button" aria-label="Mostrar senha">👁</button>
+                    <button type="button" aria-label="Mostrar senha" id="toggle-password">
+                    <img src="img/svg/eye-password-view.svg" class="gray-color" alt="">
+                    </button>
                 </div>
             </div>
             <div class="field-forgot-password">
@@ -56,5 +58,7 @@
         <!-- BACKEND: a definir rota que entra na tela de cadastro -->
         <a href="/cadastro" class="btn btn-outline">Criar nova conta</a>
     </main>
+
+    <script src="./javascript/login.js"></script>
 </body>
 </html>

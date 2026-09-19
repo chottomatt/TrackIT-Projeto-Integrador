@@ -82,12 +82,28 @@ input::-ms-reveal {
     display: none;
 }
 
+
 .password-wrapper {
     position: relative;
 }
 
 .password-wrapper input {
     padding-right: 48px;
+}
+
+.password-wrapper img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.gray-color {
+    filter: invert(77%) 
+            sepia(6%) 
+            saturate(880%) 
+            hue-rotate(176deg) 
+            brightness(82%) 
+            contrast(95%);
 }
 
 .password-wrapper button {
@@ -100,12 +116,15 @@ input::-ms-reveal {
     cursor: pointer;
 }
 
-.field-forgot-password, .field-forgot-password a {
+.field-forgot-password {
     text-align: right;
+    margin-bottom: 17px;
+}
+
+.field-forgot-password a {
     font-size: 14px;
     color: #0EA5E9;
     text-decoration: none;
-    margin-bottom: 17px;
 }
 
 .btn {
@@ -130,7 +149,6 @@ input::-ms-reveal {
 .btn-primary:hover {
     background-color: #0c85bd;
     color: #e0e0e0;
-    transition: 0.18s;
 }
 
 .btn-outline {
@@ -144,7 +162,6 @@ input::-ms-reveal {
     background-color: #e0dddd;
     color: #0F172A;
     border: 1px solid #e0dddd;
-    transition: 0.18s;
 }
 
 
@@ -157,14 +174,7 @@ input::-ms-reveal {
     font-size: 14px;
 }
 
-.divider::before {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background-color: #64748B;
-}
-
-.divider::after {
+.divider::before, .divider::after {
     content: "";
     flex: 1;
     height: 1px;
