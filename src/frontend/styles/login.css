@@ -124,12 +124,12 @@ input::-ms-reveal {
     background-color: #0EA5E9;
     color: #fff;
     border: none;
-
+    transition: 0.18s;
 }
 
 .btn-primary:hover {
     background-color: #0c85bd;
-    color: #c9c9c9;
+    color: #e0e0e0;
     transition: 0.18s;
 }
 
@@ -137,6 +137,7 @@ input::-ms-reveal {
     background-color: transparent;
     border: 1px solid #0EA5E9;
     color: #0EA5E9;
+    transition: 0.18s;
 }
 
 .btn-outline:hover {
