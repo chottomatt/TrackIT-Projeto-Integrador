@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/src/styles/style_index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrackIT</title>
@@ -9,7 +10,7 @@
     <main class="login-card">
         <header>
             <h1>
-                Track<span class="IT">IT</span>
+                Track<span class="logo-it">IT</span>
             </h1>
             <h2>Bem-vindo de volta</h2>
             <p>Faça login para acessar o inventário</p>
@@ -26,8 +27,8 @@
             <p id="login-error" role="alert" hidden></p>
             <div class="field">
                 <label for="email"> E-mail corporativo</label>
-                    <!-- BACKEND: chega em req.body.email . Validar formato também no servidor. -->
-                    <input type="email" id="email" name="email" placeholder="nome@empresa.com" required/> 
+                <!-- BACKEND: chega em req.body.email . Validar formato também no servidor. -->
+                <input type="email" id="email" name="email" placeholder="nome@empresa.com" required/> 
             </div>            
             <div class="field">
                 <label for="password"> Senha</label>
@@ -42,8 +43,8 @@
                 <!-- BACKEND: ajustar rota para a página de recuperação de senha -->
                 <a href="/esqueci-senha">Esqueceu a senha?</a>
             </div>
-                <!-- BACKEND: envia o form, em caso de sucesso entra no dashboard inventário  -->
-                <button type="submit" class="btn btn-primary">Entrar</button>
+            <!-- BACKEND: envia o form, em caso de sucesso entra no dashboard inventário  -->
+            <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
         <div class="divider">
             <p>ou</p>
