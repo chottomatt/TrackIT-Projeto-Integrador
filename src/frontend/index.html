@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="/src/styles/style_index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrackIT</title>
@@ -32,12 +35,12 @@
             </div>            
             <div class="field">
                 <label for="password"> Senha</label>
-                    <div class="password-wrapper">
-                        <!-- BACKEND: chega em req.body.password . comparar com o hash salvo
-                        nunca registrar em log, nem devolver em resposta -->
-                        <input type="password" id="password" name="password" placeholder="••••••••" required/>
-                        <button type="button" aria-label="Mostrar senha">👁</button>
-                    </div>
+                <div class="password-wrapper">
+                    <!-- BACKEND: chega em req.body.password . comparar com o hash salvo
+                    nunca registrar em log, nem devolver em resposta -->
+                    <input type="password" id="password" name="password" placeholder="••••••••" required/>
+                    <button type="button" aria-label="Mostrar senha">👁</button>
+                </div>
             </div>
             <div class="field-forgot-password">
                 <!-- BACKEND: ajustar rota para a página de recuperação de senha -->

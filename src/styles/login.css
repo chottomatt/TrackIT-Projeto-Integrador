@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    background-color: #0F172A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    background-color: #1E293B;
+    border-radius: 16px;
+    padding: 48px 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.logo-it {
+    color: #0EA5E9;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 28px;
+    margin: 6px 0;
+}
+
+header p {
+    color: #94A3B8;
+    font-size: 16px;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 14px;
+    color: #64748B;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    background-color: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 16px 14px;
+    width: 100%;
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #64748B;
+}
+
+input:focus {
+    border-color: #0EA5E9;
+    outline: none;
+}
+
+input::-ms-reveal {
+    display: none;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 48px;
+}
+
+.password-wrapper button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.field-forgot-password, .field-forgot-password a {
+    text-align: right;
+    font-size: 14px;
+    color: #0EA5E9;
+    text-decoration: none;
+    margin-bottom: 17px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #0EA5E9;
+    color: #fff;
+    border: none;
+
+}
+
+.btn-primary:hover {
+    background-color: #0c85bd;
+    color: #c9c9c9;
+    transition: 0.18s;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #0EA5E9;
+    color: #0EA5E9;
+}
+
+.btn-outline:hover {
+    background-color: #e0dddd;
+    color: #0F172A;
+    border: 1px solid #e0dddd;
+    transition: 0.18s;
+}
+
+
+.divider {
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #64748B;
+    font-size: 14px;
+}
+
+.divider::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #64748B;
+}
+
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #64748B;
+}
