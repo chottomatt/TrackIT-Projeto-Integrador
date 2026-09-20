@@ -1,7 +1,11 @@
+// elementos da página
+const inputEmail = document.querySelector("#email");
 const inputPassword = document.querySelector("#password");
 const btnEye = document.querySelector("#toggle-password");
 const eyeIcon = btnEye.querySelector("img");
+const loginForm = document.querySelector("#login-form")
 
+// script do botão de mostrar/ocultar senha 
 btnEye.addEventListener("click", function() {
 
     if (inputPassword.type === "password") {
@@ -15,9 +19,25 @@ btnEye.addEventListener("click", function() {
     }
 });
 
-const btnEnter = document.querySelector("#login-form");
-
-btnEnter.addEventListener("submit", function(event) {
+// envio do login 
+loginForm.addEventListener("submit", async function(event) {
     event.preventDefault();
-    console.log("Formulário interceptado");
+
+    try {
+        // BACKEND: rota e corpo combinados com o time (ver comentario no html)
+        const resposta = await fetch ("/api/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "aplication/json"},
+            body: JSON.stringify({
+                email: inputEmail.value,
+                password:inputPassword.value
+            })
+        });
+
+        console.log("Status da resposta:", resposta.status);
+
+    } catch(erro) {
+        console.log("Não foi possível conectar ao servidor");
+    }
 });
+
