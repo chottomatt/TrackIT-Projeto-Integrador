@@ -1,7 +1,6 @@
 const inputPassword = document.querySelector("#password");
 const btnEye = document.querySelector("#toggle-password");
 const eyeIcon = btnEye.querySelector("img");
-const btnEnter = document.querySelector("#login-form")
 
 btnEye.addEventListener("click", function() {
 
@@ -16,7 +15,9 @@ btnEye.addEventListener("click", function() {
     }
 });
 
+const btnEnter = document.querySelector("#login-form");
+
 btnEnter.addEventListener("submit", function(event) {
-    // event.preventDefault();
+    event.preventDefault();
     console.log("Formulário interceptado");
-})
+});
