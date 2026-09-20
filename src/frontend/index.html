@@ -27,7 +27,7 @@
                 erro: 401 + { "message": "E-mail ou senha inválidos" }
                         (mesma mensagem pra e-mail inexistente ou senha errada)
                 Erro do servidor: 500 -->
-        <form action="/api/auth/login" method="POST">
+        <form id="login-form" action="/api/auth/login" method="POST">
             <p id="login-error" role="alert" hidden></p>
             <div class="field">
                 <label for="email"> E-mail corporativo</label>

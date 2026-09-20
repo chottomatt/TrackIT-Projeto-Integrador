@@ -1,8 +1,9 @@
 const inputPassword = document.querySelector("#password");
 const btnEye = document.querySelector("#toggle-password");
 const eyeIcon = btnEye.querySelector("img");
+const btnEnter = document.querySelector("#login-form")
 
-btnEye.addEventListener("click", function () {
+btnEye.addEventListener("click", function() {
 
     if (inputPassword.type === "password") {
         inputPassword.type = "text";
@@ -14,3 +15,8 @@ btnEye.addEventListener("click", function () {
         eyeIcon.src = "img/svg/eye-password-view.svg";
     }
 });
+
+btnEnter.addEventListener("submit", function(event) {
+    // event.preventDefault();
+    console.log("Formulário interceptado");
+})
