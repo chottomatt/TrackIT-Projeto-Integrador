@@ -28,7 +28,6 @@
                         (mesma mensagem pra e-mail inexistente ou senha errada)
                 Erro do servidor: 500 -->
         <form id="login-form" action="/api/auth/login" method="POST">
-            <p id="login-error" role="alert" hidden></p>
             <div class="field">
                 <label for="email"> E-mail corporativo</label>
                 <!-- BACKEND: chega em req.body.email . Validar formato também no servidor. -->
@@ -44,6 +43,12 @@
                     <img src="img/svg/eye-password-view.svg" class="gray-color" alt="">
                     </button>
                 </div>
+                <div class="error-wrapper">
+                    <div class="error-inner">
+                        <p id="login-error" role="alert"></p>
+                    </div>
+                </div>
+
             </div>
             <div class="field-forgot-password">
                 <!-- BACKEND: ajustar rota para a página de recuperação de senha -->

@@ -3,7 +3,9 @@ const inputEmail = document.querySelector("#email");
 const inputPassword = document.querySelector("#password");
 const btnEye = document.querySelector("#toggle-password");
 const eyeIcon = btnEye.querySelector("img");
-const loginForm = document.querySelector("#login-form")
+const loginForm = document.querySelector("#login-form");
+const loginError = document.querySelector("#login-error");
+const errorWrapper = document.querySelector(".error-wrapper");
 
 // script do botão de mostrar/ocultar senha 
 btnEye.addEventListener("click", function() {
@@ -19,9 +21,16 @@ btnEye.addEventListener("click", function() {
     }
 });
 
+function mostrarErro(texto) {
+    loginError.textContent = texto;
+    errorWrapper.classList.add("show"); //abre com animaçao
+}
+
 // envio do login 
 loginForm.addEventListener("submit", async function(event) {
     event.preventDefault();
+
+    errorWrapper.classList.remove("show"); //fecha com animação
 
     try {
         // BACKEND: rota e corpo combinados com o time (ver comentario no html)
@@ -34,7 +43,14 @@ loginForm.addEventListener("submit", async function(event) {
             })
         });
 
-        console.log("Status da resposta:", resposta.status);
+        if (resposta.status === 200) {
+            // BACKEND: precisa definir a rota do dashboard
+            window.location.href = "/dashboard";
+        } else if (resposta.status === 401) {
+            mostrarErro("Email ou senha inválidos");
+        } else {
+            mostrarErro("Erro no servidor.   Tente novamente em instantes.");
+        }
 
     } catch(erro) {
         console.log("Não foi possível conectar ao servidor");

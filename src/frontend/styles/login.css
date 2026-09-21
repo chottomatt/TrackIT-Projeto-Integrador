@@ -116,6 +116,26 @@ input::-ms-reveal {
     cursor: pointer;
 }
 
+#login-error {
+    color: #d63a2f;
+    margin: 15px 0;
+}
+
+.error-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.error-wrapper.show {
+    grid-template-rows: 1fr;
+}
+
+.error-inner {
+    overflow: hidden;
+    min-height: 0;
+}
+
 .field-forgot-password {
     text-align: right;
     margin-bottom: 17px;
